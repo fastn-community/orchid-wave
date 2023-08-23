@@ -3259,26 +3259,21 @@ $on-mouse-leave$: $ftd.set-bool($a = $member.hover, v = false)
 ;;border-color if { member.hover } : $inherited.colors.border-strong
 spacing.fixed.px: 32
 margin-bottom.px: 32
-
--- ftd.column:
-
+padding.px: 24
+background.solid: $inherited.colors.background.step-1
+background.solid if { member.hover }: $inherited.colors.background.step-2
+border-radius.px: 20
 
 -- ftd.image:
 src: $member.image
 width: fill-container
 border-radius.px: 20
 
--- end: ftd.column
-
 -- ftd.column:
 width: fill-container
 spacing.fixed.px: 8
 padding-horizontal.px: 12
-
--- ftd.row:
-width: fill-container
 align-content: center
-spacing: space-between
 
 -- ftd.text: $member.title
 role: $inherited.types.heading-small
@@ -3291,13 +3286,6 @@ style: medium
 color: $inherited.colors.text-strong
 role: $inherited.types.fine-print
 
--- end: ftd.row
-
--- ftd.text:
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-
-$member.body
 
 -- end: ftd.column
 

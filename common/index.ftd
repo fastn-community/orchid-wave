@@ -4,7 +4,7 @@
 
 -- boolean show-footer: true
 
--- ftd.image-src site-logo: $assets.files.assets.aiglesoft-inc.svg
+-- ftd.image-src site-logo: $assets.files.assets.logo.svg
 
 -- integer logo-width: 180
 
