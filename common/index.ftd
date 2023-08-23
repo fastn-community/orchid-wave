@@ -213,25 +213,25 @@ optional string link:
 
 -- feature: Market Research
 icon: $assets.files.assets.strategy.svg
-link: landing/
+link: services/
 
 Sed ut perspiciatis unde omnis iste natus
 
 -- feature: User Experience
 icon: $assets.files.assets.strategy.svg
-link: landing/
+link: services/
 
 Error sit voluptatem accusantium doloremque laudantium
 
 -- feature: Digital Marketing
 icon: $assets.files.assets.strategy.svg
-link: landing/
+link: services/
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 -- feature: SEO Services
 icon: $assets.files.assets.strategy.svg
-link: landing/
+link: services/
 
 Ut enim ad minima veniam, quis nostrum exercitationem
 

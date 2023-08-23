@@ -6,3 +6,11 @@ company: Acme Inc.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua
+
+
+-- ws.page: 
+
+-- ws.author-bio: 
+author: $patrica
+
+-- end: ws.page
