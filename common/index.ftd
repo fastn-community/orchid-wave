@@ -32,6 +32,7 @@ dark: https://fastn.com/-/fastn.com/images/fastn-dark.svg
 -- record social-media:
 ftd.image-src src:
 string link: /
+
 -- social-media list share:
 
 -- social-media list social-links:
@@ -152,38 +153,41 @@ optional author-meta author:
 social-media list social-list:
 tags-list list tags:
 
+
+
+
+
 -- record faq:
 caption title: 
 optional body body:
-ftd.image-src icon:
+optional ftd.image-src icon:
 boolean is-last: false
 
 -- faq list list-of-faqs:
 
--- faq: How long does it take to ship my order?
-icon: $assets.files.assets.downArrow.svg
+-- faq: 1.How long does it take to ship my order?
 
 Orders are usually shipped within 1-2 business days after placing the order.
 
--- faq: What shipping options do you have?
-icon: $assets.files.assets.downArrow.svg
+-- faq: 2.What shipping options do you have?
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie ante
 in luctus rutrum. Sed eu orci mi
 
--- faq: Phasellus varius lectus eu ipsum finibus, a bibendum eros?
-icon: $assets.files.assets.downArrow.svg
+-- faq: 3.Phasellus varius lectus eu ipsum finibus, a bibendum eros?
 
 Cras sit amet ligula vitae enim interdum ultrices. Sed a ultrices purus, nec
 faucibus justo. Nulla ut lacus quis odio aliquet faucibus.
 
--- faq: Lorem ipsum dolor sit amet, consectetur?
-icon: $assets.files.assets.downArrow.svg
+-- faq: 4.Lorem ipsum dolor sit amet, consectetur?
 
 Suspendisse potenti. Vestibulum auctor dui ut enim viverra consectetur.
 
--- faq: Nulla ut lacus quis odio aliquet faucibus?
-icon: $assets.files.assets.downArrow.svg
+-- faq: 5.Nulla ut lacus quis odio aliquet faucibus?
+
+Suspendisse sagittis elit nec turpis viverra feugiat.
+
+-- faq: 6.Nulla ut lacus quis odio aliquet faucibus?
 is-last: true
 
 Suspendisse sagittis elit nec turpis viverra feugiat.
@@ -207,31 +211,40 @@ optional string link:
 
 -- feature list list-of-features:
 
--- feature: Strategy
+-- feature: Market Research
 icon: $assets.files.assets.strategy.svg
 link: landing/
 
-We are an award-winning strategic design company
+Sed ut perspiciatis unde omnis iste natus
 
--- feature: Strategy
+-- feature: User Experience
 icon: $assets.files.assets.strategy.svg
 link: landing/
 
-We are an award-winning strategic design company
+Error sit voluptatem accusantium doloremque laudantium
 
--- feature: Strategy
+-- feature: Digital Marketing
 icon: $assets.files.assets.strategy.svg
 link: landing/
 
-We are an award-winning strategic design company
+Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
--- feature: Strategy
+-- feature: SEO Services
 icon: $assets.files.assets.strategy.svg
 link: landing/
 
-We are an award-winning strategic design company
+Ut enim ad minima veniam, quis nostrum exercitationem
 
 -- end: list-of-features
+
+
+
+
+
+
+
+
+
 
 -- record testimonial-nav:
 integer index: 1
@@ -258,7 +271,7 @@ index: 3
 
 
 -- record testimonial:
-caption title:
+optional caption title:
 string user: 
 string designation:
 ftd.image-src avatar:
@@ -267,39 +280,44 @@ optional integer index:
 
 -- testimonial list list-of-testimonials:
 
--- testimonial: Fastn
+-- testimonial:
 user: Patrica AVA
 designation: UI Designer
 avatar: $assets.files.assets.avatar.svg
 index: 1
 
 A design approach is a general philosophy that may or may not include a guide
-for specific methods that work.It is a long established fact that a reader will
-be distracted by the readable content of a page when looking at its layout.
+for specific methods that work.
 
--- testimonial: Fastn is power
+-- testimonial:
 user: Meenu
 designation: Fastn Builder
 avatar: $assets.files.assets.avatar.svg
 index: 2
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie ante
-in luctus rutrum. Sed eu orci mi. Cras sit amet ligula vitae enim interdum
-ultrices. Sed a ultrices purus, nec faucibus justo. Nulla ut lacus quis odio
-aliquet faucibus.
+in luctus rutrum. Sed eu orci mi.
 
--- testimonial: Fastn is best
+-- testimonial:
 user: Priyanka
 designation: Fastn Builder
 avatar: $assets.files.assets.avatar.svg
 index: 3
 
-Nam lacinia nisi sed mauris luctus, id vestibulum enim luctus. Integer iaculis
-est a turpis consequat, id sagittis tellus aliquam. Suspendisse sagittis elit
-nec turpis viverra feugiat. Morbi fermentum convallis magna, eu sagittis ligula
-faucibus at.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie ante
+in luctus rutrum. Sed eu orci mi.
 
 -- end: list-of-testimonials
+
+
+
+
+
+
+
+
+
+
 -- record info-card:
 caption title:
 body body:
@@ -381,22 +399,94 @@ string link:
 
 -- clients: 
 logo: $assets.files.assets.logo-1.svg
-link: landing/
+link: index.html
 
 -- clients: 
 logo: $assets.files.assets.logo-2.svg
-link: landing/
+link: index.html
 
 -- clients: 
 logo: $assets.files.assets.logo-3.svg
-link: landing/
+link: index.html
 
 -- clients: 
 logo: $assets.files.assets.logo-4.svg
-link: landing/
+link: index.html
 
 -- clients: 
 logo: $assets.files.assets.logo-5.svg
-link: landing/
+link: index.html
 
 -- end: list-of-clients
+
+
+
+
+
+
+
+
+
+
+-- record feature-pricing:
+caption title:
+boolean active: false
+
+
+
+-- feature-pricing list free-feature-list:
+
+-- feature-pricing: All the features
+active: true
+
+-- feature-pricing: All the features
+active: true
+
+-- feature-pricing: All the features
+
+-- feature-pricing: All the features
+
+-- feature-pricing: All the features
+
+-- end: free-feature-list
+
+
+
+-- feature-pricing list startup-feature-list:
+
+-- feature-pricing: All the features
+active: true
+
+-- feature-pricing: All the features
+active: true
+
+-- feature-pricing: All the features
+active: true
+
+-- feature-pricing: All the features
+
+-- feature-pricing: All the features
+
+-- end: startup-feature-list
+
+
+
+
+-- feature-pricing list enterprise-feature-list:
+
+-- feature-pricing: All the features
+active: true
+
+-- feature-pricing: All the features
+active: true
+
+-- feature-pricing: All the features
+active: true
+
+-- feature-pricing: All the features
+active: true
+
+-- feature-pricing: All the features
+active: true
+
+-- end: enterprise-feature-list

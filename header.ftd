@@ -154,7 +154,6 @@ padding-vertical.px: 20
 align-content: center
 
 -- ftd.row:
-width: fill-container
 link: $header-desktop.site-url
 align-content: left
 
