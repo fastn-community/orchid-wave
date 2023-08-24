@@ -1079,7 +1079,7 @@ spacing.fixed.px: 24
 
 -- ftd.text: $cta-left-hug.tag
 if: { cta-left-hug.tag != NULL }
-background.solid: $inherited.colors.accent.primary
+background.solid: $inherited.colors.info.base
 color: $inherited.colors.info.text
 border-radius.px: 30
 padding-vertical.px: 5
@@ -1198,12 +1198,11 @@ align-content: center
 spacing.fixed.px: 24
 
 -- ftd.column:
-align-content: right
 spacing.fixed.px: 24
 
 -- ftd.text: $cta-right-hug.tag
 if: { cta-right-hug.tag != NULL }
-background.solid: $inherited.colors.accent.primary
+background.solid: $inherited.colors.info.base
 color: $inherited.colors.info.text
 border-radius.px: 30
 padding-vertical.px: 5
