@@ -56,8 +56,8 @@ breadcrumb: $page.breadcrumb
 login-button: $page.login-button
 logo-width: $page.logo-width
 logo-height: $page.logo-height
-colors: $ftd.default-colors
-types: $ftd.default-types
+colors: $cs.main
+types: $typo.types
 
 -- theme.page.popup:
 
