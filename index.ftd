@@ -1556,7 +1556,7 @@ string id: testimonials
 -- ftd.column:
 width: fill-container
 id: $testimonials-card.id
-background.solid: $inherited.colors.cta-primary.base
+background.solid: $inherited.colors.background.step-1
 
 -- ftd.desktop: 
 
@@ -2422,7 +2422,7 @@ align-content: center
 width.fixed.percent: 70
 border-width.px: 1
 border-radius.px: 8
-border-color: $inherited.colors.border
+border-color: $inherited.colors.background.base
 background.solid: $inherited.colors.background.base
 height.fixed.percent: 80
 overflow-y: hidden
