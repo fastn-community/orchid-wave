@@ -138,7 +138,7 @@ boolean $mouse-in: false
 
 -- ftd.column:
 width: fill-container
-background.solid: $inherited.colors.background.overlay
+background.solid: $inherited.colors.background.step-1
 align-content: center
 padding-horizontal.px: 40
 
@@ -154,7 +154,6 @@ padding-vertical.px: 20
 align-content: center
 
 -- ftd.row:
-width: fill-container
 link: $header-desktop.site-url
 align-content: left
 
