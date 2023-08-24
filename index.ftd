@@ -1556,7 +1556,7 @@ string id: testimonials
 -- ftd.column:
 width: fill-container
 id: $testimonials-card.id
-background.solid: $inherited.colors.background.step-1
+background.solid: $inherited.colors.cta-primary.base
 
 -- ftd.desktop: 
 

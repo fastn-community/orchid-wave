@@ -1,3 +1,5 @@
+-- import: cs
+-- import: typo
 -- import: fastn-community.github.io/wizard-media-theme/tnc
 -- import: fastn-community.github.io/wizard-media-theme as theme
 export: footer-badge, logo-cloud, content, banner-card, testimonials-card, features-card, faqs, tc-popup, tc-item, tc-item-item, featured-post, posts, h2, h3, markdown, post-card, post, image, row-container, contact-form, iframe, pricing, pricing-card, client-card, hero-right-hug-expanded, cta-left-hug, cta-right-hug, banner-card, team, member, hero-bottom-hug,author-bio
@@ -55,8 +57,8 @@ breadcrumb: $page.breadcrumb
 login-button: $page.login-button
 logo-width: $page.logo-width
 logo-height: $page.logo-height
-colors: $ftd.default-colors
-types: $ftd.default-types
+colors: $cs.main
+types: $typo.types
 
 -- theme.page.popup:
 
