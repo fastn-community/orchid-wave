@@ -189,7 +189,7 @@ if: { page.show-footer }
 width: fill-container
 children: $page.footer
 align-self: center
-max-width.fixed.px: $common.max-width
+
 
 -- end: ftd.column
 
