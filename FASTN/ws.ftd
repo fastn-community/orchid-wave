@@ -1,4 +1,4 @@
--- import: cs
+-- import: fastn-community.github.io/golden-sunlight-cs as cs
 -- import: typo
 -- import: fastn-community.github.io/wizard-media-theme/tnc
 -- import: fastn-community.github.io/wizard-media-theme as theme
@@ -68,7 +68,7 @@ types: $typo.types
 
 -- theme.page.footer:
 
--- theme.footer-badge: Copyright © 2023 Aiglesoft Inc.
+-- theme.footer-badge: Copyright © 2023 Wizard Media Inc.
 
 -- end: theme.page.footer
 

@@ -827,7 +827,6 @@ max-height.fixed.px: 480
 
 
 
-
 -- component button-solid:
 caption title:
 string cta-link:
@@ -843,9 +842,6 @@ align-content: center
 $on-mouse-enter$: $ftd.set-bool($a = $button-solid.cta-hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $button-solid.cta-hover, v = false)
 link: $button-solid.cta-link
-border-width.px: 2
-border-color: $inherited.colors.border
-border-color if { button-solid.cta-hover }: $inherited.colors.cta-primary.border
 border-radius.px: 6
 spacing.fixed.px: 12
 
@@ -3583,6 +3579,7 @@ spacing.fixed.px: 16
 if: { featured-post-card-desktop.author.image != NULL }
 src: $featured-post-card-desktop.author.image
 width.fixed.px: 44
+border-radius.px: 50
 
 -- ftd.column:
 spacing.fixed.px: 4
