@@ -1556,7 +1556,7 @@ string id: testimonials
 -- ftd.column:
 width: fill-container
 id: $testimonials-card.id
-background.solid: $inherited.colors.cta-primary.base
+background.solid: $inherited.colors.background.step-1
 
 -- ftd.desktop: 
 
@@ -1708,6 +1708,7 @@ align-content: center
 if: { testimonials-card-details.avatar != NULL }
 src: $testimonials-card-details.avatar
 width: auto
+border-radius.px: 50
 
 -- ftd.column:
 spacing.fixed.px: 2
