@@ -4459,7 +4459,7 @@ $hero-bottom-hug-expanded.body
 spacing.fixed.px: 12
 margin-top.px: 50
 
--- button-lg: $hero-bottom-hug-expanded.primary-cta
+-- button-solid: $hero-bottom-hug-expanded.primary-cta
 if: { hero-bottom-hug-expanded.primary-cta != NULL }
 cta-link: $hero-bottom-hug-expanded.primary-cta-link
 
