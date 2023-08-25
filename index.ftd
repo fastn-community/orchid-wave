@@ -3319,8 +3319,8 @@ $on-mouse-leave$: $ftd.set-bool($a = $member.hover, v = false)
 spacing.fixed.px: 32
 margin-bottom.px: 32
 padding.px: 24
-background.solid: $inherited.colors.background.step-2
-background.solid if { member.hover }: $inherited.colors.background.step-1
+background.solid: $inherited.colors.background.step-1
+background.solid if { member.hover }: $inherited.colors.background.base
 border-radius.px: 20
 
 -- ftd.image:
