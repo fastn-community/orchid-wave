@@ -733,6 +733,22 @@ wrap: true
 spacing: space-between
 
 -- ftd.column:
+width.fixed.percent: 50
+width if { ftd.device == "mobile" }: fill-container
+align-self: center
+margin-vertical.px if { ftd.device == "mobile" }: 30
+
+-- ftd.image:
+if: { hero-right-hug-expanded.image != NULL }
+width: fill-container
+src: $hero-right-hug-expanded.image
+height: fill-container
+max-height.fixed.px: 480
+
+-- end: ftd.column
+
+
+-- ftd.column:
 width.fixed.percent: 45
 width if { ftd.device == "mobile" }: fill-container
 color: $inherited.colors.text
@@ -795,21 +811,6 @@ right.px: 4
 -- ftd.text: $hero-right-hug-expanded.error-message
 if: { hero-right-hug-expanded.error-message != NULL }
 role: $inherited.types.copy-small
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.percent: 50
-width if { ftd.device == "mobile" }: fill-container
-align-self: center
-margin-vertical.px if { ftd.device == "mobile" }: 30
-
--- ftd.image:
-if: { hero-right-hug-expanded.image != NULL }
-width: fill-container
-src: $hero-right-hug-expanded.image
-height: fill-container
-max-height.fixed.px: 480
 
 -- end: ftd.column
 
