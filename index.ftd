@@ -1393,10 +1393,11 @@ spacing: space-between
 background.solid if { features-card-details.cta-hover }: $inherited.colors.background.step-1
 $on-mouse-enter$: $ftd.set-bool($a = $features-card-details.cta-hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $features-card-details.cta-hover, v = false)
+align-content: center
 
 -- ftd.image:
 src: $features-card-details.icon
-width.fixed.percent: 25
+width.fixed.px: 48
 
 -- ftd.column:
 width.fixed.percent: 70
