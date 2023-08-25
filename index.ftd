@@ -1896,7 +1896,7 @@ boolean $cta-hover: false
 -- ftd.column:
 width.fixed.percent: 30
 width if { ftd.device == "mobile" }: fill-container
-background.solid: $inherited.colors.background.step-2
+background.solid: $inherited.colors.background.step-1
 border-radius.px: 12
 shadow if {  pricing-card.active || pricing-card.cta-hover }: $shadow-14
 $on-mouse-enter$: $ftd.set-bool($a = $pricing-card.cta-hover, v = true)
