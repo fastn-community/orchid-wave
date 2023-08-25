@@ -161,7 +161,7 @@ align-content: left
 -- ftd.image:
 if: { header-desktop.site-logo != NULL }
 src: $header-desktop.site-logo
-width.fixed.px: $header-desktop.logo-width
+width: auto
 height.fixed.px: $header-desktop.logo-height
 
 -- ftd.text: $header-desktop.site-name
@@ -180,7 +180,6 @@ site-name: $header-desktop.site-name
 
 -- ftd.row: 
 width: fill-container
-align-content: center
 spacing.fixed.px: 32
 margin-left.px: 24
 
@@ -600,6 +599,7 @@ background.solid: $inherited.colors.background.step-1
 width: fill-container
 
 -- ftd.row:
+if: { !ftd.is_empty($header-mobile.toc) }
 align-self: start
 
 -- ftd.text: $header-mobile.current-section.title
