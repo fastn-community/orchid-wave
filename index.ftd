@@ -741,8 +741,8 @@ margin-vertical.px if { ftd.device == "mobile" }: 30
 if: { hero-right-hug-expanded.image != NULL }
 width: fill-container
 src: $hero-right-hug-expanded.image
-height: fill-container
-max-height.fixed.px: 480
+height if { ftd.device !="mobile"}: fill-container
+max-height.fixed.px if { ftd.device !="mobile"}: 480
 
 -- end: ftd.column
 
