@@ -1,4 +1,3 @@
--- import: fastn-community.github.io/wizard-media-theme/common
 -- import: fastn-community.github.io/opensans-typography
 -- import: fastn/processors as pr
 -- import: fastn-community.github.io/wizard-media-theme/header as h
@@ -4641,3 +4640,225 @@ white-space: nowrap
 -- end: ftd.column
 
 -- end: search-card
+
+
+
+-- component logo-cloud:
+optional caption title:
+optional body body:
+optional string tag:
+common.logos list logo-list:
+string id: logo-cloud
+
+-- ftd.column:
+width: fill-container
+id: $logo-cloud.id
+classes: section
+
+-- ftd.desktop:
+
+-- logo-cloud-desktop: $logo-cloud.title
+body: $logo-cloud.body
+tag: $logo-cloud.tag
+logo-list: $logo-cloud.logo-list
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- logo-cloud-mobile: $logo-cloud.title
+body: $logo-cloud.body
+tag: $logo-cloud.tag
+logo-list: $logo-cloud.logo-list
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: logo-cloud
+
+
+
+
+
+
+
+
+
+
+-- component logo-cloud-desktop:
+optional caption title:
+optional body body:
+optional string tag:
+common.logos list logo-list:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 80
+padding-vertical.px: 111
+padding-horizontal.px: 50
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.column:
+width.fixed.percent: 60
+spacing.fixed.px: 17
+padding-top.px: 30
+
+-- ftd.text: $logo-cloud-desktop.tag
+if: { logo-cloud-desktop.tag != NULL }
+background.solid: $inherited.colors.info.base
+color: $inherited.colors.info.text
+border-radius.px: 30
+padding-vertical.px: 5
+role: $inherited.types.link
+padding-horizontal.px: 11
+
+-- ftd.text: $logo-cloud-desktop.title
+if: { logo-cloud-desktop.title != NULL }
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { logo-cloud-desktop.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$logo-cloud-desktop.body
+
+-- end: ftd.column
+
+-- ftd.row:
+width: fill-container
+wrap: true
+spacing.fixed.px: 10
+align-content: center
+
+-- logo-lists: $obj.title
+$loop$: $logo-cloud-desktop.logo-list as $obj
+icon: $obj.icon
+body: $obj.body
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: logo-cloud-desktop
+
+
+
+
+
+
+
+
+
+
+-- component logo-cloud-mobile:
+optional caption title:
+optional body body:
+optional string tag:
+common.logos list logo-list:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+background.solid: $inherited.colors.background.step-1
+padding-vertical.px: 24
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 17
+padding-top.px: 30
+padding-horizontal.px: 24
+
+-- ftd.text: $logo-cloud-mobile.tag
+if: { logo-cloud-mobile.tag != NULL }
+background.solid: $inherited.colors.info.base
+color: $inherited.colors.info.text
+border-radius.px: 30
+padding-vertical.px: 5
+role: $inherited.types.link
+padding-horizontal.px: 11
+
+-- ftd.text: $logo-cloud-mobile.title
+if: { logo-cloud-mobile.title != NULL }
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { logo-cloud-mobile.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$logo-cloud-mobile.body
+
+-- end: ftd.column
+
+-- ftd.column:
+padding-horizontal.px: 24
+wrap: true
+spacing.fixed.px: 10
+width: fill-container
+
+-- logo-lists: $obj.title
+$loop$: $logo-cloud-mobile.logo-list as $obj
+icon: $obj.icon
+body: $obj.body
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: logo-cloud-mobile
+
+
+
+
+
+
+
+
+
+-- component logo-lists:
+optional caption title:
+optional ftd.image-src icon:
+optional body body:
+
+-- ftd.column:
+width.fixed.px: 362
+width if { ftd.device == "mobile" }: fill-container
+background.solid: $inherited.colors.background.base
+;;shadow: $shadow
+padding.px: 32
+spacing.fixed.px: 24
+
+-- ftd.column:
+height.fixed.px: 66
+width.fixed.px: 80
+border-top-right-radius.px: 24
+border-bottom-left-radius.px: 24
+background.solid: $inherited.colors.cta-primary.base
+align-content: center
+
+-- ftd.image:
+if: { logo-lists.icon != NULL }
+src: $logo-lists.icon
+width.fixed.px: 46
+
+-- end: ftd.column
+
+-- ftd.text: $logo-lists.title
+if: { logo-lists.title != NULL }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { logo-lists.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$logo-lists.body
+
+-- end: ftd.column
+
+-- end: logo-lists
