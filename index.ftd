@@ -1060,7 +1060,7 @@ margin-vertical.px: 64
 -- ftd.column:
 width.fixed.percent: 40
 padding.px: 50
-background.solid: $inherited.colors.background.step-1
+background.solid: $inherited.colors.background.step-2
 
 -- ftd.image:
 if: { cta-left-hug.image != NULL }
@@ -1126,7 +1126,7 @@ src: $cta-left-hug.image
 width: fill-container
 max-height.fixed.px: 360
 padding.px: 50
-background.solid: $inherited.colors.background.step-1
+background.solid: $inherited.colors.background.step-2
 
 -- ftd.text: $cta-left-hug.tag
 if: { cta-left-hug.tag != NULL }
@@ -1232,7 +1232,7 @@ cta-link: $cta-right-hug.primary-cta-link
 -- ftd.column:
 width.fixed.percent: 40
 padding.px: 50
-background.solid: $inherited.colors.background.step-1
+background.solid: $inherited.colors.background.step-2
 
 -- ftd.image:
 if: { cta-right-hug.image != NULL }
@@ -1286,7 +1286,7 @@ if: { cta-right-hug.image != NULL }
 src: $cta-right-hug.image
 width: fill-container
 padding.px: 50
-background.solid: $inherited.colors.background.step-1
+background.solid: $inherited.colors.background.step-2
 max-width.fixed.px: 360
 
 -- end: ftd.column
@@ -1895,7 +1895,7 @@ boolean $cta-hover: false
 -- ftd.column:
 width.fixed.percent: 30
 width if { ftd.device == "mobile" }: fill-container
-background.solid: $inherited.colors.background.step-1
+background.solid: $inherited.colors.background.step-2
 border-radius.px: 12
 shadow if {  pricing-card.active || pricing-card.cta-hover }: $shadow-14
 $on-mouse-enter$: $ftd.set-bool($a = $pricing-card.cta-hover, v = true)
@@ -3138,7 +3138,7 @@ inset-body: false
 spread.px: 0
 
 -- ftd.shadow shadow-14:
-color: rgba(0, 59, 128, 0.15)
+color: rgba(149, 57, 233, 0.15)
 x-offset.px: 12
 y-offset.px: 12
 blur.px: 0
@@ -3318,8 +3318,8 @@ $on-mouse-leave$: $ftd.set-bool($a = $member.hover, v = false)
 spacing.fixed.px: 32
 margin-bottom.px: 32
 padding.px: 24
-background.solid: $inherited.colors.background.step-1
-background.solid if { member.hover }: $inherited.colors.background.step-2
+background.solid: $inherited.colors.background.step-2
+background.solid if { member.hover }: $inherited.colors.background.step-1
 border-radius.px: 20
 
 -- ftd.image:
@@ -3610,7 +3610,7 @@ width: fill-container
 -- ftd.row:
 if: { featured-post-card-desktop.cta-primary != NULL }
 border-radius.px: 4
-background.solid: $inherited.colors.shadow
+background.solid: $inherited.colors.cta-primary.base
 spacing.fixed.px: 16
 padding-horizontal.px: 50
 padding-vertical.px: 16
@@ -3620,7 +3620,7 @@ $on-mouse-leave$: $ftd.set-bool($a = $featured-post-card-desktop.mouse-in, v = f
 
 -- ftd.text: $featured-post-card-desktop.cta-primary
 role: $inherited.types.button-large
-color: $inherited.colors.background.base
+color: $inherited.colors.cta-primary.text
 link: $featured-post-card-desktop.cta-primary-url
 
 -- ftd.image:
