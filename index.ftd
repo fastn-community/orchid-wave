@@ -2023,6 +2023,8 @@ optional string primary-cta-link:
 optional string secondary-cta: 
 optional string secondary-cta-link:
 optional string error-message:
+optional string tag:
+optional string primary-cta-icon:
 string id: hero-bottom-hug
 
 -- ftd.column:
@@ -4391,3 +4393,251 @@ children: $row-container.wrapper
 -- end: ftd.column
 
 -- end: row-container
+
+
+
+
+
+
+
+
+-- component hero-bottom-hug-expanded:
+caption title:
+optional body body:
+optional string tag:
+optional string label:
+ftd.image-src image:
+optional string primary-cta:
+string primary-cta-link: index.html
+ftd.image-src primary-cta-icon: $assets.files.assets.check-solid.svg
+
+-- ftd.column:
+width: fill-container
+align-content: center
+padding-vertical.px: 100
+
+-- ftd.column:
+width: fill-container
+color: $inherited.colors.text
+align-content: center
+
+-- ftd.text: $hero-bottom-hug-expanded.tag
+if: { hero-bottom-hug-expanded.tag != NULL }
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+text-align: center
+
+-- ftd.text: $hero-bottom-hug-expanded.title
+role: $inherited.types.heading-hero
+max-width.fixed.percent: 45
+margin-top.px: 24
+text-align: center
+
+-- ftd.text: $hero-bottom-hug-expanded.label
+if: { hero-bottom-hug-expanded.label != NULL}
+role: $inherited.types.copy-large
+max-width.fixed.percent: 45
+margin-top.px: 24
+text-align: center
+
+-- ftd.image:
+width: fill-container
+max-width.fixed.px: 1320
+height.fixed.px: 680
+src: $hero-bottom-hug-expanded.image
+margin-top.px: 45
+
+-- ftd.text:
+if: { hero-bottom-hug-expanded.body != NULL }
+role: $inherited.types.copy-large
+max-width.fixed.percent: 40
+text-align: center
+margin-top.px: 48
+
+$hero-bottom-hug-expanded.body
+
+-- ftd.row:
+spacing.fixed.px: 12
+margin-top.px: 50
+
+-- button-lg: $hero-bottom-hug-expanded.primary-cta
+if: { hero-bottom-hug-expanded.primary-cta != NULL }
+cta-link: $hero-bottom-hug-expanded.primary-cta-link
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: hero-bottom-hug-expanded
+
+
+
+-- component contact-us:
+optional caption title:
+optional body body:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.background.base
+color: $inherited.colors.text
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $common.max-width
+padding-vertical.px: 100
+align-content: center
+
+-- ftd.text: $contact-us.title
+if: { contact-us.title != NULL }
+role: $inherited.types.heading-large
+margin-top.px: 8
+
+-- ftd.text:
+if: { contact-us.body != NULL }
+role: $inherited.types.heading-small
+max-width.fixed.percent if { ftd.device == "desktop" }: 40
+margin-top.px: 16
+text-align: center
+
+$contact-us.body 
+
+-- contact-us-form:
+fist-name-label: First Name:
+last-name-label: Last Name:
+email-label: Email *
+phone-label: Phone:
+message-label: Leave Us a Message
+primary-cta: Send Message
+primary-cta-link: index.html
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: contact-us
+
+
+
+
+
+
+-- component input-group:
+caption title:
+
+-- ftd.column:
+width.fixed.percent: 47
+width if { ftd.device == "mobile" }: fill-container
+
+-- ftd.text: $input-group.title
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+-- ftd.text-input:
+padding-vertical.px: 6
+padding-horizontal.px: 12
+width: fill-container
+margin-top.px: 8
+border-width.px: 1
+border-color: $inherited.colors.border
+border-radius.px: 6
+color: $inherited.colors.text
+height.fixed.px: 40
+
+-- end: ftd.column
+
+-- end: input-group
+
+
+
+
+
+
+
+
+
+-- component search-card:
+caption title:
+string input-label:
+optional boolean $mouse-in: false
+string primary-cta:
+string primary-cta-link:
+optional string input-placeholder: Enter your work email...
+optional body body:
+optional ftd.image-src image: $assets.files.assets.mail.png
+string id: search-card
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.custom.one
+
+-- ftd.column:
+id: $search-card.id
+width: fill-container
+max-width.fixed.px: $common.max-width
+align-content: center
+padding-horizontal.px: 40
+padding-vertical.px if { ftd.device != "mobile" }: 80
+padding-top.px if { ftd.device == "mobile" }: 80
+padding-bottom.px if { ftd.device == "mobile" }: 24
+classes: section
+
+-- ftd.image:
+if: { search-card.image != NULL }
+src: $search-card.image
+
+-- ftd.text: $search-card.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+max-width.fixed.percent: 45
+margin-top.px: 40
+text-align: center
+
+-- ftd.column:
+margin-top.px: 24
+
+-- ftd.text: $search-card.input-label
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- ftd.row:
+width.fixed.px: 730
+width.fixed.px if { ftd.device == "mobile" }: 350
+margin-top.px: 10
+height.fixed.px: 50
+height.fixed.px if {ftd.device == "mobile"}: 42
+background.solid: $inherited.colors.background.base
+spacing: space-between
+align-content: center
+border-radius.px: 10
+padding-horizontal.px: 3
+
+-- ftd.text-input:
+width.fixed.percent if {ftd.device == "desktop"}: 75
+role: $inherited.types.copy-small
+padding-horizontal.px: 20
+padding-vertical.px: 10
+background.solid: transparent
+
+-- ftd.text: $search-card.primary-cta
+color: $inherited.colors.text
+background.solid: $inherited.colors.cta-primary.base
+role: $inherited.types.copy-small
+padding-horizontal.px: 32
+padding-vertical.px: 12
+border-radius.px: 10
+text-align: center
+white-space: nowrap
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: search-card
