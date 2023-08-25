@@ -542,6 +542,7 @@ boolean github-icon: false
 optional string github-url:
 boolean blog: false
 boolean breadcrumb: false
+boolean $mouse-in: false
 
 -- ftd.column: 
 width: fill-container
@@ -586,6 +587,36 @@ align-self: center
 -- fallback-title:
 if: { header-mobile.site-logo == NULL }
 site-name: $header-mobile.site-name
+
+-- end: ftd.row
+
+-- ftd.row:
+align-content: center
+spacing.fixed.px: 4
+
+-- ftd.image:
+if: { ftd.dark-mode }
+src: $assets.files.assets.light-icon.svg
+width.fixed.px: 28
+height.fixed.px: 28
+background.solid if { header-mobile.mouse-in }: #CCC
+border-radius.px: 100
+padding.px: 2
+$on-click$: $ftd.enable-light-mode()
+$on-mouse-enter$: $ftd.set-bool($a =  $header-mobile.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a =  $header-mobile.mouse-in, v = false)
+
+-- ftd.image:
+if: { !ftd.dark-mode }
+src: $assets.files.assets.dark-icon.svg
+width.fixed.px: 28
+height.fixed.px: 28
+background.solid if { header-mobile.mouse-in }: #CCC
+border-radius.px: 100
+padding.px: 2
+$on-mouse-enter$: $ftd.set-bool($a =  $header-mobile.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a =  $header-mobile.mouse-in, v = false)
+$on-click$: $ftd.enable-dark-mode()
 
 -- end: ftd.row
 
