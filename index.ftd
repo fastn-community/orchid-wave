@@ -800,7 +800,7 @@ border-width.px: 1
 border-color: $inherited.colors.border
 border-color if { hero-right-hug-expanded.cta-hover }: $inherited.colors.cta-primary.border
 border-radius.px: 32
-anchor: parent
+anchor if { hero-right-hug-expanded.input-placeholder != NULL }: parent
 top.px: 4
 right.px: 4
 
