@@ -3803,7 +3803,7 @@ optional caption title:
 optional string timestamp:
 body body:
 optional ftd.image-src image:
-common.author-meta author:
+optional common.author-meta author:
 string url:
 common.tags-list list tags:
 
@@ -3851,7 +3851,7 @@ optional caption title:
 optional string timestamp:
 body body:
 optional ftd.image-src image:
-common.author-meta author:
+optional common.author-meta author:
 string url:
 common.tags-list list tags:
 
@@ -3866,6 +3866,7 @@ spacing.fixed.px: 12
 
 -- ftd.image:
 src: $post-card-ui-desktop.image
+if: {post-card-ui-desktop.image != NULL}
 width: fill-container
 height: hug-content
 link: $post-card-ui-desktop.url
@@ -3882,6 +3883,7 @@ link: $post-card-ui-desktop.url
 $post-card-ui-desktop.body
 
 -- ftd.row:
+if: {post-card-ui-desktop.author != NULL}
 padding-top.px: 24
 align-content: center
 spacing.fixed.px: 16
@@ -3896,6 +3898,7 @@ border-radius.px: 500
 spacing.fixed.px: 4
 
 -- ftd.text: $post-card-ui-desktop.author.title
+if: { post-card-ui-desktop.author.title != NULL}
 role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
 link: $post-card-ui-desktop.author.bio-url
@@ -3929,7 +3932,7 @@ optional caption title:
 optional string timestamp:
 body body:
 optional ftd.image-src image:
-common.author-meta author:
+optional common.author-meta author:
 string url:
 common.tags-list list tags:
 
@@ -3944,6 +3947,7 @@ spacing.fixed.px: 12
 
 -- ftd.image:
 src: $post-card-ui-mobile.image
+if: {post-card-ui-mobile.image != NULL}
 width: fill-container
 link: $post-card-ui-mobile.url
 
@@ -3958,6 +3962,7 @@ color: $inherited.colors.text
 $post-card-ui-mobile.body
 
 -- ftd.row:
+if: {post-card-ui-mobile.author != NULL}
 padding-top.px: 32
 align-content: center
 spacing.fixed.px: 16
@@ -3972,6 +3977,7 @@ border-radius.px: 500
 spacing.fixed.px: 4
 
 -- ftd.text: $post-card-ui-mobile.author.title
+if: {post-card-ui-mobile.author.title != NULL}
 role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
 link: $post-card-ui-mobile.author.bio-url
