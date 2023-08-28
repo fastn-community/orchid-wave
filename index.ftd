@@ -936,7 +936,6 @@ margin-top.px: 15
 spacing.fixed.px: 72
 width: fill-container
 overflow-y: auto
-align-content: center
 
 -- client-lists:
 $loop$: $client-card-desktop.client-list as $obj
@@ -1552,6 +1551,7 @@ $faqs-list-detail.body
 -- component testimonials-card:
 optional caption title:
 common.testimonial list testimonials:
+common.testimonial-nav list nav:
 string id: testimonials
 
 -- ftd.column:
@@ -4883,3 +4883,134 @@ margin-bottom.px: 24
 border-radius.px: 8
 
 -- end: iframe
+
+
+
+
+
+
+
+
+
+
+-- component testimonials:
+optional caption title:
+optional body body:
+children child:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+align-content: center
+
+-- ftd.row:
+width: fill-container
+max-width.fixed.px: $common.max-width
+padding-vertical.px: 30
+align-content: center
+wrap: true
+
+-- ftd.column:
+width.fixed.percent: 50
+color: $inherited.colors.text
+
+-- ftd.text: $testimonials.title
+if: { testimonials.title != NULL }
+role: $inherited.types.heading-medium
+style: bold
+
+-- ftd.text:
+if: { testimonials.body != NULL }
+role: $inherited.types.heading-large
+max-width.fixed.percent: 50
+margin-top.px: 40
+style: bold
+
+$testimonials.body
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 50
+children: $testimonials.child
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: testimonials
+
+
+
+
+
+
+
+
+
+
+-- component contact-us-form:
+string fist-name-label:
+string last-name-label:
+string email-label:
+string phone-label:
+string message-label:
+string primary-cta:
+string primary-cta-link:
+
+-- ftd.column:
+width: fill-container
+min-width.fixed.px: 360
+max-width.fixed.px: 800
+background.solid: $inherited.colors.background.base
+border-radius.px: 8
+padding.px: 24
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+align-content: center
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.percent: 6
+wrap: true
+
+-- input-group: $contact-us-form.fist-name-label
+
+-- input-group: $contact-us-form.last-name-label
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.percent: 6
+wrap: true
+
+-- input-group: $contact-us-form.email-label
+
+-- input-group: $contact-us-form.phone-label
+
+-- end: ftd.row
+
+-- ftd.text-input:
+padding-vertical.px: 6
+padding-horizontal.px: 12
+width: fill-container
+border-width.px: 1
+border-color: $inherited.colors.text
+border-radius.px: 6
+color: $inherited.colors.text
+height.fixed.px: 160
+multiline: true
+
+-- button-solid: $contact-us-form.primary-cta
+cta-link: $contact-us-form.primary-cta-link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: contact-us-form
