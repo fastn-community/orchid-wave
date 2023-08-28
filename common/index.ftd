@@ -283,7 +283,7 @@ optional integer index:
 -- testimonial:
 user: Patrica AVA
 designation: UI Designer
-avatar: $assets.files.assets.avatar.jpg
+avatar: $assets.files.assets.avatar.png
 index: 1
 
 A design approach is a general philosophy that may or may not include a guide
@@ -292,7 +292,7 @@ for specific methods that work.
 -- testimonial:
 user: Meenu
 designation: Fastn Builder
-avatar: $assets.files.assets.avatar.jpg
+avatar: $assets.files.assets.avatar.png
 index: 2
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie ante
@@ -301,7 +301,7 @@ in luctus rutrum. Sed eu orci mi.
 -- testimonial:
 user: Priyanka
 designation: Fastn Builder
-avatar: $assets.files.assets.avatar.jpg
+avatar: $assets.files.assets.avatar.png
 index: 3
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie ante
