@@ -195,9 +195,9 @@ optional string currency:
 optional string subscription:
 feature list feature-list:
 optional string cta-text:
-optional string cta-link:
+optional string body-title:
 optional body body:
-boolean $cta-hover: false
+optional string tag:
 
 -- ftd.column:
 width.fixed.percent: 30
