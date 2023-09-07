@@ -196,7 +196,7 @@ optional boolean active:
 optional integer price:
 optional string currency:
 optional string subscription:
-common.feature-pricing list feature-list:
+feature list feature-list:
 optional string cta-text:
 optional string cta-link:
 optional body body:
