@@ -1,54 +1,439 @@
 -- ws.page:
 
--- ws.pricing: Incredibly Easy To Use, But Surprisingly Powerful
+-- pricing: Incredibly Easy To Use, But Surprisingly Powerful
 
--- ws.pricing.body:
+-- pricing.body:
 
 Lorem ipsum dolor sit amet, consectet adipiscing elit. Suspendisse varius enim 
 in eros elementum tristique. consectet adipiscing elit. Suspendisse varius enim 
 in eros elementum tristique.
 
-
--- ws.pricing.pricing-cards:
-
--- ws.pricing-card: Starter
+-- pricing-card: Starter
 active: false 
 price: 0
 currency: \$
 subscription: mo
-feature-list: $common.free-feature-list
+feature-list: $free-feature-list
 cta-text: Get Started
 cta-link: /pricing/
 
 Lorem ipsum dolor sit amet, consectet adipiscing elit.
 
--- ws.pricing-card: Basic
+-- pricing-card: Basic
 active: true 
 price: 99
 currency: \$
 subscription: mo
-feature-list: $common.startup-feature-list
+feature-list: $startup-feature-list
 cta-text: Get Started
 cta-link: /pricing/
 
 Lorem ipsum dolor sit amet, consectet adipiscing elit.
 
--- ws.pricing-card: Advanced
+-- pricing-card: Advanced
 active: false 
 price: 153
 currency: \$
 subscription: mo
-feature-list: $common.enterprise-feature-list
+feature-list: $enterprise-feature-list
 cta-text: Get Started
 cta-link: /pricing/
 
 Lorem ipsum dolor sit amet, consectet adipiscing elit.
 
--- end: ws.pricing.pricing-cards
-
--- end: ws.pricing
+-- end: pricing
 
 -- ws.client-card: Trusted by the top companies in this industry
 client-list: $common.list-of-clients
 
 -- end: ws.page
+
+
+
+
+
+
+
+
+
+-- component pricing:
+optional caption title:
+optional body body:
+children pricing-cards:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.desktop:
+
+-- pricing-desktop: $pricing.title
+pricing-cards: $pricing.pricing-cards
+
+$pricing.body
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- pricing-mobile: $pricing.title
+pricing-cards: $pricing.pricing-cards
+
+$pricing.body
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: pricing
+
+
+
+
+
+
+
+
+-- component pricing-desktop:
+optional caption title:
+optional body body:
+children pricing-cards:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+spacing.fixed.px: 32
+
+-- ftd.text: $pricing-desktop.title
+if: { pricing-desktop.title!= NULL }
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+text-align: center
+width.fixed.percent: 50
+
+-- ftd.text:
+if: { pricing-desktop.body!= NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+text-align: center
+width.fixed.percent: 60
+
+$pricing-desktop.body
+
+-- ftd.row:
+width: fill-container
+children: $pricing-desktop.pricing-cards
+spacing.fixed.px: 32
+margin-vertical.px: 48
+align-content: center
+max-width.fixed.px: 1120
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: pricing-desktop
+
+
+
+
+
+
+
+
+
+
+-- component pricing-mobile:
+optional caption title:
+optional body body:
+children pricing-cards:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+spacing.fixed.px: 24
+
+-- ftd.text: $pricing-mobile.title
+if: { pricing-mobile.title!= NULL }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+text-align: center
+
+-- ftd.text:
+if: { pricing-mobile.body!= NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+text-align: center
+
+$pricing-mobile.body
+
+-- ftd.column:
+width: fill-container
+children: $pricing-mobile.pricing-cards
+spacing.fixed.px: 16
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: pricing-mobile
+
+
+
+
+
+
+
+
+
+
+-- component pricing-card:
+optional caption title:
+optional boolean active:
+optional integer price:
+optional string currency:
+optional string subscription:
+feature list feature-list:
+optional string cta-text:
+optional string cta-link:
+optional body body:
+boolean $cta-hover: false
+
+-- ftd.column:
+width.fixed.percent: 30
+width if { ftd.device == "mobile" }: fill-container
+background.solid: $inherited.colors.background.step-1
+border-radius.px: 12
+shadow if {  pricing-card.active || pricing-card.cta-hover }: $shadow-14
+$on-mouse-enter$: $ftd.set-bool($a = $pricing-card.cta-hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $pricing-card.cta-hover, v = false)
+padding.px: 32
+align-content: center
+
+-- ftd.row:
+color: $inherited.colors.text-strong
+role: $inherited.types.heading-medium
+width: fill-container
+margin-bottom.px: 16
+
+-- ftd.text: $pricing-card.title
+if: { pricing-card.title != NULL }
+style: medium
+width: fill-container
+text-align: center
+
+-- end: ftd.row
+
+-- ftd.row:
+margin-bottom.px: 32
+align-content: center
+spacing.fixed.px: 4
+color: $inherited.colors.text-strong
+role: $inherited.types.heading-medium
+
+-- ftd.text: $pricing-card.currency
+if: { pricing-card.currency != NULL }
+
+-- ftd.integer: $pricing-card.price
+if: { pricing-card.price != NULL }
+role: $inherited.types.heading-large
+
+-- ftd.text: \/
+if: { pricing-card.subscription != NULL }
+
+-- ftd.text: $pricing-card.subscription
+if: { pricing-card.subscription != NULL }
+
+-- end: ftd.row
+
+-- ftd.column:
+width: fill-container
+margin-bottom.px: 32
+spacing.fixed.px: 32
+align-content: center
+
+-- ftd.text: 
+if: { pricing-card.body != NULL }
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+text-align: center
+
+$pricing-card.body
+
+-- end: ftd.column
+
+-- feature-loop: $obj.title
+active: $obj.active
+$loop$: $pricing-card.feature-list as $obj
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-top.px: 40
+
+-- button-solid: $pricing-card.cta-text
+if: { pricing-card.cta-text != NULL }
+cta-link: $pricing-card.cta-link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: pricing-card
+
+
+
+
+
+
+
+
+
+
+-- component feature-loop:
+caption title:
+boolean active:
+ftd.image-src info-icon: $assets.files.assets.tick.svg 
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 12
+margin-bottom.px: 12
+
+-- ftd.image:
+src: $feature-loop.info-icon
+width.fixed.px: 12
+align-self: center
+
+-- ftd.text: $feature-loop.title
+color: $inherited.colors.text-strong
+color if { !feature-loop.active } : $inherited.colors.text
+role: $inherited.types.copy-small
+
+-- end: ftd.row
+
+-- end: feature-loop
+
+
+
+
+
+
+
+
+-- component button-solid:
+caption title:
+string cta-link:
+optional ftd.image-src src:
+boolean $cta-hover: false
+
+-- ftd.row:
+padding-vertical.px: 8
+padding-horizontal.px: 20
+background.solid: $inherited.colors.cta-primary.base
+background.solid if { button-solid.cta-hover }: $inherited.colors.cta-primary.hover
+align-content: center
+$on-mouse-enter$: $ftd.set-bool($a = $button-solid.cta-hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $button-solid.cta-hover, v = false)
+link: $button-solid.cta-link
+border-radius.px: 6
+spacing.fixed.px: 12
+
+-- ftd.text: $button-solid.title
+color: $inherited.colors.cta-primary.text
+color if { button-solid.cta-hover }: $inherited.colors.cta-primary.text
+role: $inherited.types.button-medium
+
+-- ftd.image:
+if: { button-solid.src != NULL }
+src: $button-solid.src
+height.fixed.px: 14
+width.fixed.px: 14
+
+-- end: ftd.row
+
+-- end: button-solid
+
+
+
+
+
+
+-- ftd.shadow shadow-14:
+color: rgba(149, 57, 233, 0.15)
+x-offset.px: 12
+y-offset.px: 12
+blur.px: 0
+inset-body: false
+spread.px: 1
+
+
+
+
+
+
+
+
+
+-- record feature:
+caption title:
+boolean active: false
+
+
+
+-- feature list free-feature-list:
+
+-- feature: All the features
+active: true
+
+-- feature: All the features
+active: true
+
+-- feature: All the features
+
+-- feature: All the features
+
+-- feature: All the features
+
+-- end: free-feature-list
+
+
+
+-- feature list startup-feature-list:
+
+-- feature: All the features
+active: true
+
+-- feature: All the features
+active: true
+
+-- feature: All the features
+active: true
+
+-- feature: All the features
+
+-- feature: All the features
+
+-- end: startup-feature-list
+
+
+
+
+-- feature list enterprise-feature-list:
+
+-- feature: All the features
+active: true
+
+-- feature: All the features
+active: true
+
+-- feature: All the features
+active: true
+
+-- feature: All the features
+active: true
+
+-- feature: All the features
+active: true
+
+-- end: enterprise-feature-list
