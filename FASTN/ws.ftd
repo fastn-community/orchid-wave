@@ -1,8 +1,8 @@
 -- import: cs
 -- import: typo
--- import: fastn-community.github.io/startup-theme-1/tnc
+-- import: fastn-community.github.io/orchid-wave/tnc
 
--- import: fastn-community.github.io/startup-theme-1 as theme
+-- import: fastn-community.github.io/orchid-wave as theme
 export: footer-badge, logo-cloud, content, banner-card, testimonials-card, features-card, faqs, tc-popup, tc-item, tc-item-item, featured-post, posts, h2, h3, markdown, post-card, post, image, row-container, contact-form, iframe, pricing, pricing-card, client-card, hero-right-hug-expanded, cta-left-hug, cta-right-hug, banner-card, hero-bottom-hug,author-bio,search-card, contact-us,hero-bottom-hug-expanded,testimonials
 exposing: markdown, post, h3
 
@@ -69,7 +69,7 @@ types: $typo.types
 
 -- theme.page.footer:
 
--- theme.footer-badge: Copyright © 2023 startup-theme-1
+-- theme.footer-badge: Copyright © 2023 orchid-wave
 
 -- end: theme.page.footer
 

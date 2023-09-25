@@ -1,6 +1,6 @@
 -- import: fastn-community.github.io/opensans-typography
 -- import: fastn/processors as pr
--- import: fastn-community.github.io/startup-theme-1/header as h
+-- import: fastn-community.github.io/orchid-wave/header as h
 -- import: fastn-community.github.io/typography
 export: markdown,h0,h1,h2,h3
 

@@ -1,4 +1,4 @@
--- import: fastn-community.github.io/startup-theme-1/blog-meta/patrica
+-- import: fastn-community.github.io/orchid-wave/blog-meta/patrica
 
 -- common.post-meta meta: Keep your files safe with Martex
 post-image: $assets.files.assets.featured.jpg
