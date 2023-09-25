@@ -1,15 +1,15 @@
 -- import: fastn
 
--- fastn.package: fastn-community.github.io/startup-theme-1
-favicon: /-/fastn-community.github.io/startup-theme-1/favicon.ico
+-- fastn.package: fastn-community.github.io/orchid-wave
+favicon: /-/fastn-community.github.io/orchid-wave/favicon.ico
 
 -- fastn.dependency: fastn-community.github.io/blue-violet-cs as cs
 -- fastn.dependency: fastn-community.github.io/opensans-typography as typo
 -- fastn.dependency: fastn-community.github.io/typography
 
--- fastn.auto-import: fastn-community.github.io/startup-theme-1/FASTN/ws
--- fastn.auto-import: fastn-community.github.io/startup-theme-1/assets
--- fastn.auto-import: fastn-community.github.io/startup-theme-1/common
+-- fastn.auto-import: fastn-community.github.io/orchid-wave/FASTN/ws
+-- fastn.auto-import: fastn-community.github.io/orchid-wave/assets
+-- fastn.auto-import: fastn-community.github.io/orchid-wave/common
 
 -- fastn.sitemap:
 
